@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Subir imagenes</title>
+</head>
+<body>
+
+<table>
+<%=form_tag ({:action =>:upload_ima1}, :multipart=>true) %>
+	<tr>
+	<td><label for="ima1" >Imagen 1:</label></td>
+	<td><%= file_field_tag :ima1 %></td>
+	<td><img src="/images/portada01.jpg" alt=""  width="113" height="68" border="0" id="im1"/></td>
+	<td><%= submit_tag "Subir" %></td>
+	</tr>
+</form>
+</table>
+
+<table>
+<%=form_tag ({:action =>:upload_ima2}, :multipart=>true) %>
+	<tr>
+	<td><label for="ima2" >Imagen 2:</label></td>
+	<td><%= file_field_tag :ima2 %></td>
+	<td><img src="/images/portada02.jpg" alt=""  width="113" height="68" border="0" id="im2"/></td>
+	<td><%= submit_tag "Subir" %></td>
+	</tr>
+</form>
+</table>
+
+<table>
+<%=form_tag ({:action =>:upload_ima3}, :multipart=>true) %>
+	<tr>
+	<td><label for="ima2" >Imagen 3:</label></td>
+	<td><%= file_field_tag :ima3 %></td>
+	<td><img src="/images/portada03.jpg" alt=""  width="113" height="68" border="0" id="im3"/></td>
+	<td><%= submit_tag "Subir" %></td>
+	</tr>
+</form>
+</table>
+
+
+</body>

@@ -1,0 +1,14 @@
+<div id="promocode" class="promocode">
+Promo-code 
+  <input id="inpromo" name="promocode" type="text" size="8" maxlength="8" onchange="update_promo(this.value)" value='<%=session[:promocode] if session[:promocode]%>'/>
+  &nbsp;
+  <img height="19" border="0" width="59" src="/images/bt_validar.jpg" onClick="update_promo($('inpromo').value)"/>  
+
+  <%if @error%>
+  &nbsp; <%=@error%></b>
+  <%end%>
+  <%if session[:promocode]%>
+	  &nbsp; Descuento: <%=session[:promocode_val]%>€ &nbsp;&nbsp; <b>Precio Final: <%=@total-session[:promocode_val]%>€</b>
+	<%end%>
+  <br><br><br>*Gastos de envío gratuitos para España
+</div>

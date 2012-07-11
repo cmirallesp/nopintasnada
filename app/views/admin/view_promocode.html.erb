@@ -1,0 +1,10 @@
+
+<table>
+	<tr><td>Code:</td><td> <%=@prc.code%></td></tr>
+	<tr><td>Fecha de activavión:</td><td><%=@prc.start_date %></td></tr>
+	<tr><td>Dias de validez:</td><td><%=@prc.days%></td></tr>
+	<tr><td>Fecha de caducidad:</td><td><%=@prc.end_date %></td></tr>
+	<tr><td>Valor:</td><td><%=@prc.value%></td></tr>
+</table>
+<br/>
+<%= link_to 'Volver', :action=>:new_promocode %>

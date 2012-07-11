@@ -1,0 +1,20 @@
+ #page[:ima_zapa].replace_html "<img src='/images/01_r_cr.jpg'/>"
+ 
+ _name = "#{params[:model]}#{params[:color]}#{params[:cordill]}"
+#_name="noimagen" if not File.exists("/images/#{_name}.jpg")
+#page.alert (_name)
+ page[:foto_A].src="/images/#{_name}.jpg"
+ page[:foto_A].name="#{_name}"
+ 
+ #page[:foto_det_a].replace_html "<img src='/images/#{_name}.jpg' name='#{_name}' id='foto_A'/>"
+ page[:foto_B].src="/images/#{_name}b.jpg"
+ page[:fc_b].href="/images/#{_name}b.jpg"
+ #page[:foto_det_b].replace_html "<img src='/images/#{_name}b.jpg'/>"
+page[:foto_C].src= "/images/#{_name}c.jpg"
+page[:fc_c].href="/images/#{_name}c.jpg"
+ #page[:foto_det_c].replace_html "<img src='/images/#{_name}c.jpg'/>"
+ page[:foto_D].src= "/images/#{_name}d.jpg"
+ page[:fc_d].href="/images/#{_name}d.jpg"
+ #page[:foto_det_d].replace_html "<img src='/images/#{_name}d.jpg'/>"
+
+# page[:ima_zapa].toggle

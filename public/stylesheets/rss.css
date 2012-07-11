@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*
+ * Example of RSS Ticker Styling
+ *
+ * Version: 1.0.1
+ * (c) Copyright 2010, Zazar Ltd
+ *
+ */
+
+.rssFeed
+{
+font-family:Arial, Helvetica, sans-serif;
+   color:#5f5a59;   
+   font-size:12px; 
+   text-align:left;
+   height:234px;    
+
+}
+
+.rssFeed a
+{
+ color: #5f5a59;
+ text-decoration:underline;
+}
+
+.rssHeader { padding: 0.2em 0; }
+
+.rssRow h4, .rssRow p, .rssRow div
+{
+	margin: 0;
+	padding: 0.5em;
+}
+
+.rssRow 
+{
+list-style-type: none;
+padding: 0px;
+margin: 0px;
+}
+
+#ticker1 .odd { background-color: #e8e8fc; }
+#ticker1 .even { background-color: #d4d4e8; }
+
+#ticker2 .odd { background-color: #e8fce8; }
+#ticker2 .even { background-color: #d4e8d4; }
+.rssBody{
+margin-left:0px;
+}

@@ -1,0 +1,20 @@
+
+
+<table>
+
+<% form_for :promocode, @prc, :url=>{:action=>:view_promocode} do |f|  %>
+	 <%= f.error_messages :header_message => "Promocode invalido!", :message => "Tienes que solucionar los siguientes errores:" %>
+	<%=f.hidden_field :code %>
+	<%=f.hidden_field :state %>
+	<tr><td>Fecha de activavión:</td><td><%= date_select :promocode, :start_date %></td></tr>
+	<tr><td>Dias de validez:</td><td><%=f.text_field :days %></td></tr>
+	<tr><td>Valor:</td><td><%=f.text_field :value%></td></tr>
+	
+	<!--<tr><td>Activo:</td><td><%=f.check_box :state%></td></tr>-->
+	<tr><td></td><td><%= submit_tag "Crear" %></td></tr> 
+<!--	<%= error_messages_for (:promocode,:object =>@prc) %>-->
+<% end %>
+
+</table>
+<br/>
+

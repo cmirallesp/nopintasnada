@@ -1,0 +1,10 @@
+<table>
+
+<% form_tag :action=>:update_banner,:id=>@cfg do  %>
+	<tr><td>Modelo:</td><td> <%=text_field :cfg, :value%></td></tr>
+	<tr><td></td><td><%= submit_tag "Actualizar" %></td></tr> 
+<% end %>
+
+</table>
+<br/>
+

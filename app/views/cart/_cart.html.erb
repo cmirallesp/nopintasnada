@@ -1,0 +1,33 @@
+<!--dibuja el carro de la compra-->
+<div align="center">
+    <!-- Contingut -->
+    <div id="contingut">
+    <!-- col 1 -->
+    <div align="left" class="col_marca_1">
+    <img src="/images/bar_blue04.gif" width="239" height="6" border="0">   
+        <div class="cesta_dest1">
+        CESTA
+        </div>
+        <div class="cesta_ico"><img src="/images/cesta_ico.jpg" width="193" height="149" border="0"></div>
+        
+        
+    <div><img src="/images/bar_blue04.gif" width="239" height="6" border="0"></div>  
+      </div>
+    <!-- col 2 -->
+    <div align="left" class="col_marca_2">
+    <img src="/images/bar_blue02.gif" width="491" height="3" border="0">
+     
+    <!--tabla de items -->
+    <div class="tabla_items" id="tabla_items" >
+      <%= render :partial=> "cart_items"%>
+    </div>
+      
+    <div class="tabla_totales" id="tabla_totales">
+      <%=render :partial => "totales"%>    
+     </div>
+    
+      <img src="/images/bar_blue02.gif" width="491" height="3" border="0">    
+    </div>
+    </div>
+
+</div>

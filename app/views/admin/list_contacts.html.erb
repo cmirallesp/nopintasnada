@@ -1,0 +1,26 @@
+<h1>Listing contacts</h1>
+
+<table>
+  <tr>
+		<td>Nombre</td>
+		<td>Primer apellido</td>
+		<td>Segundo apellido</td>
+		<td>Email</td>
+		<td>Teléfono</td>
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr>
+		<td><%=contact.nombre%></td>
+		<td><%=contact.ap1%></td>
+		<td><%=contact.ap2%></td>
+		<td><%=contact.email%></td>		
+		<td><%=contact.telf%></td>
+    <!--<td><%= link_to 'Edit', :action=>:edit_product, :id=>contact %></td>-->
+    <!--<td><%= link_to 'Destroy', :confirm => 'Are you sure?', :method => :delete_product, :id=>contact %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+

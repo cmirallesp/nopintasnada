@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title></title>
+	  <%= javascript_include_tag :defaults %>
+	  <%= yield :head %>
+  </head>
+  
+  <body onload="$('frm').submit();">    
+    <img src="/images/ajax-loader.gif"/>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="frm" id="frm"> 
+    <!--Dades Fixes  --> 
+    <input name="cmd" value="_cart" type="hidden"> 
+    <input name="business" value="joan.cornet@nopintasnada.com" type="hidden"> 
+    <input name="shopping_url" value="http://nopintasnada.heroku.com/" type="hidden"> 
+    <input name="currency_code" value="EUR" type="hidden"> 
+    <input name="upload" value="1" type="hidden"> 
+    
+        <!-- pagina de compra realitzada correctament --> 
+    <!-- he posat marca.html com a prova --> 
+    <input name="return" value="http://nopintasnada.heroku.com/cart/gracias" type="hidden"> 
+    <!--<input name="return" value="http://localhost:3000/cart/congratulations" type="hidden">-->
+  <% i=1
+    @cart.each do |k,v|
+    %>
+      <input name="item_number_<%=i%>" value="<%=k%>" type="hidden"> 
+      <input name="item_name_<%=i%>" value="<%="#{Product.find_by_model(v[:model]).nom}"%>" type="hidden">  
+      <%if i==1 then %>
+	    	<input name="amount_<%=i%>" value="<%=(v[:preu].to_f-@promo.to_f).round(2)%>" type="hidden"> 
+      <%else%>
+	    	<input name="amount_<%=i%>" value="<%=v[:preu]%>" type="hidden"> 
+      <%end%>
+      <input name="quantity_<%=i%>" value="<%=v[:unitats]%>" type="hidden"> 
+    
+  <% i=i+1
+    end%>
+       <!-- Item 3. Gastos de enviament --> 
+<!--
+    <input name="item_number_<%=i%>" value="<%="Gastos Espa&ntilde;a"%>" type="hidden"> 
+    <input name="item_name_<%=i%>" value="Gastos de Envio" type="hidden"> 
+    <input name="amount_<%=i%>" value="<%=@envio%>" type="hidden"> 
+    <input name="quantity_<%=i%>" value="1" type="hidden">     
+-->
+
+
+    <!-- Boto Submit --> 
+    <!--input value="PayPal SandBox" type="submit" type="hidden"--> 
+    </form>
+  </body>
+</html>

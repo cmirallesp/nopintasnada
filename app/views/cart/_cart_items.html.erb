@@ -1,0 +1,44 @@
+<!--PARTIAL QUE DIBUJA LOS ELEMENTOS DEL CARRITO-->
+<table width="467" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="247" align="left" scope="col">Artículo</th>
+        <th width="95" scope="col">Precio Unid.</th>
+        <th width="50" scope="col">Unids.</th>
+        <th align="center" width="50" scope="col">Total</th>
+        <th width="25" scope="col">Borrar</th>
+      </tr>  
+      <!--iteramos por cada elemento del carrito y printamos los valores-->
+      <% @cart.each do |k,v|
+          p=Product.find_by_model(k.match(/^\d{3}/).to_s) 
+      %>
+      <tr>
+        <td><%=p.nom%> (<%=p[:model]%>-<%=k%>)</td>
+        <td align="center" 
+            id="pu_<%=k%>" ><%=p.preu%>€
+        </td>
+        <td>
+           <input id="<%=k%>" 
+                  name="unidades" 
+                  type="text" 
+                  size="1" 
+                  maxlength="2" 
+                  value="<%=v[:unitats]%>" 
+                  onChange="setUnitats(this.id)"/>
+        </td>
+        <td align="right" 
+            id=pt_<%=k%>>
+            <%=p.preu.to_f*v[:unitats].to_f%>€
+        </td>
+        <td align="center">
+	<a href="#">
+          <img  id="del_<%=k%>" 
+                src="/images/bt_borrar.jpg" 
+                width="18" 
+                height="17" 
+                border="0"
+                onClick="removeFromCart(this.id)">
+	</a>
+        </td>
+      </tr>      
+      <% end %>
+</table>

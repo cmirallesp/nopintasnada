@@ -1,0 +1,49 @@
+   
+ <!-- col 1 -->
+    <div align="left" class="col_marca_1">
+        <img src="/images/bar_grey01.gif" width="239" height="2" border="0">   
+        <div class="contacto_dest1">CONTACTO</div>
+            <div class="interrogant">       <img src="/images/interrogant.jpg" width="168" height="226" border="0">   </div>
+        <img src="/images/bar_grey01.gif" width="239" height="2" border="0">   
+
+    </div>    
+    <!-- col 2 -->
+    <div align="left" class="col_marca_2">
+ 	<form name="frm" action="/cart/addContact" method="post" id="frm" >            
+		<img src="/images/bar_grey02.gif" width="491" height="3" border="0"> 
+                <div class="contacto_dest2">
+               
+                Nos pondremos en contacto contigo<br>
+                con la mayor brevedad posible.<br>
+                ¡Muchas gracias!<br><br>
+                
+                NOMBRE (*)
+                <input maxlength="35" name="nombre" class="campo_contacto" id="nombre">
+                APELLIDO 1
+                <input maxlength="35" name="ap1" class="campo_contacto" id="apellido1">
+                APELLIDO 2
+                <input maxlength="35" name="ap2" class="campo_contacto" id="apellido2">
+                E-MAIL (*)
+                <input maxlength="35" name="email1" class="campo_contacto" id="email1">
+                REPITE TU E-MAIL (*)
+                <input maxlength="35" name="email2" class="campo_contacto" id="email2">
+                N&Uacute;MERO TEL&Eacute;FONO
+                <input maxlength="9" name="telf" class="campo_contacto" id="telf">
+                N&deg;DE PEDIDO (si es sobre una compra)
+                <input maxlength="35" name="npedido" class="campo_contacto" id="npedido">
+		<br>* Campos obligatorios
+                <input type="hidden" name='authenticity_token' value="<%= form_authenticity_token%>" id="fat"/>
+                
+                </div>
+                <div class="contacto_dest3">
+                OBSERVACIONES
+                <textarea name="mensaje" cols="20" rows="16" class="campo_contacto" id="mensaje"></textarea>
+                <input id="privacidad" name="privacidad" type="checkbox" value="ok">He leído y acepto las condiciones de privacidad de esta web.<br>
+               
+                <a title="Privacidad" href="/privacidad.html" 
+                target="_blank" class="enlace_grey">LEER TÉRMINOS Y CONDICIONES</a>
+                <a href="#"><img src="/images/bt_enviar_contacto.jpg" width="80" height="45" border="0" onClick="addContact()"></a>                
+                </div>
+                 <div><img src="/images/bar_grey02.gif" width="491" height="3" border="0"> </div>
+ </form>
+    </div>

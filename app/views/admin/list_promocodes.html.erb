@@ -1,0 +1,25 @@
+<table>
+
+	<tr>
+		<th>Código</th>
+		<th>Fecha inicio</th>
+		<th>Dias</th>
+		<th>Fecha fin</th>
+		<th>valor</th>
+		<th>Activo</th>	
+	</tr>
+<% @prcs.each do |prc| %>
+  <tr>
+		<td><%=prc.code%></td>
+		<td><%=prc.start_date%></td>
+		<td><%=prc.days%></td>
+		<td><%=prc.end_date%></td>
+		<td><%=prc.value%></td>
+		<td><%=if prc.state: "Sí" else "No" end%></td>
+	  <td><%= link_to 'Eliminar',  :action => :delete_promocode, :id=>prc %></td>
+  </tr>
+<% end %>
+<!--<tr><td colspan="4"><%= link_to 'Añadir', :action=>:add_product, :enabled=>false %><td></tr>-->
+</table>
+<div id='frm'></div>
+<br />

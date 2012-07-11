@@ -1,0 +1,2 @@
+page[:tabla_items].replace_html :partial=>"cart_items"         
+page[:tabla_totales].replace_html :partial=>"totales"

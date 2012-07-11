@@ -1,0 +1,59 @@
+<script type="text/javascript">
+function nombreFocus(){
+$('nombre').focus();
+}
+</script>
+<div id="contingut">
+    <!-- col 1 -->
+    <div align="left" class="col_marca_1">
+    <img width="239" height="6" border="0" src="/images/bar_blue04.gif">   
+        <div class="cesta_dest1">
+        CESTA
+        </div>
+        <div class="cesta_ico"><img width="193" height="149" border="0" src="/images/cesta_ico.jpg"></div>
+        
+        
+    <div><img width="239" height="6" border="0" src="/images/bar_blue04.gif"></div>  
+      </div>
+    <!-- col 2 -->
+    <div align="left" class="col_marca_2">
+    <img width="491" height="3" border="0" src="/images/bar_blue02.gif">  
+    <div class="cesta_dest2">
+        Ya estás a punto<br> de comprar
+     </div>  
+      <div class="cesta_dest3">
+                Pero antes queremos conocerte mejor: 
+                <br><br>
+              NOMBRE (*)
+              <form id="frm" method="post" action="/cart/buyIt" name="frm">
+                <input id="nombre" class="campo_contacto" name="nombre" maxlength="35"><br><br>
+        E-MAIL (*)
+        	<br><input id="email" class="campo_contacto" name="email" maxlength="35"><br><br>
+                ¿ALGUNA WEB, BLOG O VÍDEO QUE TE APASIONE?<br>
+		<input name="idioma" id="idioma" class="campo_cesta" maxlength="35"><br><br>
+                ¿CÓMO NOS HAS CONOCIDO?<br>
+                <input type="radio" value=" A través de un amigo" name="conocio">A través de un amigo<br>
+                <input type="radio" value="Navegando por internet" name="conocio">Navegando por internet<br>
+                <input type="radio" value="De otra forma" name="conocio">De otra forma<br><br>
+                * Campos obligatorios<br><br>
+                <input type="hidden" name='authenticity_token' id="aut"/>
+                </form>
+                <input type="checkbox" value="ok" name="privacidad" id="privacidad">                
+                He leído y acepto los 
+                <a class="enlace_grey" target="_blank" href="/terminos-condiciones.html" 
+                title="Términos y condiciones">Términos y condiciones</a>
+              
+      </div>
+      <div class="bt_continua">
+	<a href="#">
+        <img width="85" height="17" border="0" src="/images/bt_continuar.jpg" 
+         title="Continuar" alt="Continuar"
+         onClick="toBuy()"
+        >
+	</a>
+      </div>
+        
+     <img width="491" height="3" border="0" src="/images/bar_blue02.gif">
+    </div>
+    </div>
+

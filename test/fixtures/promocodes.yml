@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  end_date: 2011-02-26
+  value: 1.5
+  state: false
+  days: 1
+  code: MyString
+  start_date: 2011-02-26
+
+two:
+  end_date: 2011-02-26
+  value: 1.5
+  state: false
+  days: 1
+  code: MyString
+  start_date: 2011-02-26

@@ -1,0 +1,19 @@
+
+
+<table>
+
+
+<% @prds.each do |prd| %>
+  <tr>
+		<td><%=prd.model%></td>
+		<td><%=prd.nom%></td>
+		<td><%=prd.descripcio%></td>
+		<td><%=prd.preu%></td>
+    <td><%= link_to 'Editar', :action=>:edit_product, :id=>prd %></td>
+  </tr>
+<% end %>
+<!--<tr><td colspan="4"><%= link_to 'Añadir', :action=>:add_product, :enabled=>false %><td></tr>-->
+</table>
+
+<br />
+

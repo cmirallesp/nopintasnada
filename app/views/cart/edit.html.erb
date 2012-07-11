@@ -1,0 +1,179 @@
+<div align="center">
+      
+	    <!-- Contingut -->
+    <div id="contingut">
+      <!-- col 1-->
+      <div align="left" class="col_1">
+	        <img src="/images/bar_blue02.gif" width="239" height="4" border="0"> 
+        <div class="t_model">
+		      	MODELO
+      	</div>
+	   	  <div class="na_model">
+      		<%=@p.nom%>
+        </div>  
+          <div class="desc_model">
+            <%=@p.descripcio%> 
+            <%if @p.url && @p.url.length>0%>
+              <a href=<%="#{@p.url}"%> target="_blank" class="enlace_blue">+ Info</a>
+            <%end%>
+          </div>  
+        <div class="p_model">
+          <%=@p.preu%>€
+          </div>
+        <div class="faq_model">
+                    <a href="/faq.html" class="enlace_nav_sec_blue" target="_blank">PREGUNTAS FRECUENTES</a>
+        </div>
+ <div class="compartirfacebook">
+        <iframe id="ifrmFcbk" src="http://www.facebook.com/plugins/like.php?href=www.nopintasnada.com/cart/edit/<%="#{@p.model}#{@color}#{@cordill}"%>&amp;layout=standard&amp;show_faces=true&amp;width=239&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:239px; height:80px;" allowTransparency="true"></iframe>
+        </div>
+
+        <div class="tall_1">
+          	   <img src="/images/bar_blue04.gif" width="239" height="6" border="0"> 
+        </div>
+         <div class="tall_1b">
+               NUMERACIÓN
+        </div>
+         <div class="tall_num_a">
+         <a title="talla 35" href="#" onClick="marcaTalla('35')">          
+        	  <img id="35" src="/images/t35.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 36" href="#" onClick="marcaTalla('36')">          
+        	  <img id="36" src="/images/t36.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 37" href="#" onClick="marcaTalla('37')">          
+        	  <img id="37" src="/images/t37.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 38" href="#" onClick="marcaTalla('38')">          
+        	  <img id="38" src="/images/t38.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 39" href="#" onClick="marcaTalla('39')">          
+        	  <img id="39" src="/images/t39.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 40" href="#" onClick="marcaTalla('40')">          
+        	  <img id="40" src="/images/t40.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_a">
+         <a title="talla 41" href="#" onClick="marcaTalla('41')">          
+        	  <img id="41" src="/images/t41.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 42" href="#" onClick="marcaTalla('42')">          
+        	  <img id="42" src="/images/t42.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 43" href="#" onClick="marcaTalla('43')">          
+        	  <img id="43" src="/images/t43.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 44" href="#" onClick="marcaTalla('44')">          
+        	  <img id="44" src="/images/t44.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 45" href="#" onClick="marcaTalla('45')">          
+        	  <img id="45" src="/images/t45.gif" width="39" height="21" border="0"></a>
+        </div>
+         <div class="tall_num_b">
+         <a title="talla 46" href="#" onClick="marcaTalla('46')">          
+        	  <img id="46" src="/images/t46.gif" width="39" height="21" border="0"></a>
+        </div>
+        <div class="tall_2">
+	        <img src="/images/bar_blue02.gif" width="239" height="4" border="0"> 
+        </div>        
+      </div>
+      <!-- fi col 1 -->
+      
+      <!-- col 2 -->  
+      <div align="left" class="col_2">
+      
+	  	<div class="barr_col5">
+	        <img src="/images/bar_blue07.gif" width="367" height="3" border="0" onload="marcaColorCordo();">      
+	   </div>       
+       <div align="center" class="foto_det_a" id="foto_det_a">
+       	  <img src="/images/<%=@param%>.jpg" width="345" height="324" border="0" id="foto_A" 
+       	  name= <%=@param%> > 
+       </div>
+      <div class="foto_det_b" id="foto_det_b">
+       	        <img src="/images/bar_blue05.gif" width="113" height="2" border="0">   
+       	        <a id="fc_b" rel="ga1" class="g" href="/images/<%=@param%>01b.jpg">       	          
+       	          <img id="foto_B" src="/images/<%=@param%>b.jpg" width="113" height="106" border="0">
+       	        </a>   
+       	        <img src="/images/bar_blue06.gif" width="113" height="2" border="0">      
+       </div>
+       <div class="foto_det_c" id="foto_det_c">
+       	        <img src="/images/bar_blue05.gif" width="113" height="2" border="0">   
+       	        <a id="fc_c" rel="ga1" class="g" href="/images/<%=@param%>01c.jpg">
+       	          <img id="foto_C" src="/images/<%=@param%>c.jpg" width="113" height="106" border="0">
+       	        </a>   
+       	        <img src="/images/bar_blue06.gif" width="113" height="2" border="0">      
+       </div>
+      <div class="foto_det_d" id="foto_det_d">
+       	        <img src="/images/bar_blue05.gif" width="113" height="2" border="0">
+       	        <a id="fc_d" rel="ga1" class="g" href="/images/<%=@param%>01d.jpg">   
+       	        <img id="foto_D" src="/images/<%=@param%>d.jpg" width="113" height="106" border="0">
+       	        </a>   
+       	        <img src="/images/bar_blue06.gif" width="113" height="2" border="0">      
+       </div>      
+      </div>
+      <!-- fi col 2 -->
+      
+      <!-- inici col 3 -->  
+      <div align="left" class="col_3">          
+                <img src="/images/bar_blue01.gif" width="113" height="6" border="0">
+        <div class="t_model">
+			      	COLORES
+   	    </div>
+                   <div class="col_model">                                 
+                     <a title="" href="#" onClick="marcaColor('<%=@model%>','A')"><img id="A" src="/images/<%=@model%>A.jpg" width="33" height="74" border="0"></a>
+                   </div>
+                    <div class="col_model2">
+                      <a title="" href="#" onClick="marcaColor('<%=@model%>','B')"><img id="B" src="/images/<%=@model%>B.jpg" width="33" height="74" border="0"></a>
+                   </div>
+                    <div class="col_model2">
+                      <a title="" href="#" onClick="marcaColor('<%=@model%>','C')"><img id="C" src="/images/<%=@model%>C.jpg" width="33" height="74" border="0"></a>
+                   </div>
+                   
+                   
+                  <img src="/images/bar_blue01.gif" width="113" height="6" border="0">
+                  <div class="t_model">
+			      	CORDONES
+		    	  </div>
+                  <div class="cordons">
+                      <a title="" href="#" onClick="marcaCordo('01')"><img id="01" src="/images/01.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('02')"><img id="02" src="/images/02.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('03')"><img id="03" src="/images/03.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('04')"><img id="04" src="/images/04.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('05')"><img id="05" src="/images/05.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('06')"><img id="06" src="/images/06.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('07')"><img id="07" src="/images/07.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('08')"><img id="08" src="/images/08.jpg" width="112" height="21" border="0"></a>
+                      <a title="" href="#" onClick="marcaCordo('09')"><img id="09" src="/images/09.jpg" width="112" height="21" border="0"></a>              
+                 </div>
+<div class="bt_comprar">
+                 <a title="Comprar" href="#" onMouseOver="swatFoto('btcomprar','/images/bt_comprar2.jpg')" 
+                 onMouseOut="swatFoto('btcomprar','/images/bt_comprar.jpg')"
+                 onclick="addToCart();">
+                 <img src="/images/bt_comprar.jpg" width="113" height="110" border="0" id="btcomprar"></a>
+   
+                </div>
+                   
+      </div>
+      <!-- fi col 3 -->           
+    </div>   
+</div>
+
+<input type="hidden" value="0" id="sel_cordo">
+<input type="hidden" value="0" id="sel_color">
+<input type="hidden" value="0" id="sel_talla">
+<form method="post" action = "/cart/add" name="form" id = "frm">
+  <input type="hidden"  id="color" name="color">
+  <input type="hidden"  id="cordill" name="cordill">
+  <input type="hidden"  id="talla"  name="talla">
+  <input type="hidden"  id="id" name="id">
+  <input type="hidden"  id="authenticity_token" name="authenticity_token">  
+</form>
+

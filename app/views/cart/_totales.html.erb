@@ -1,0 +1,18 @@
+<!--PARTIAL QUE DIBUJA LOS TOTALES DEL CARRO-->
+<div class="gastos_envio">
+    <!--  Gastos envío <%=@envio%>€ -->
+</div>
+
+<div align="right" class="subtotal" id="subtotal">TOTAL <%=@total%>€</div>
+<div>  <img src="/images/bar_blue02.gif" width="491" height="3" border="0"></div>
+
+<%=render :partial=>"promo"%>
+
+<div class="bt_continuar_compra">
+       <a href="#"><img src="/images/bt_continuar_compra.jpg" width="154" height="17" border="0" 
+        onClick="gotoList()"></a>    
+</div>
+<div class="bt_formalizar">
+       <a href="#"><img src="/images/bt_formalizar.jpg" width="85" height="17" border="0"
+       onClick="gotoBuy()"></a>    
+</div>

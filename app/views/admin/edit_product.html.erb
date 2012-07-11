@@ -1,0 +1,18 @@
+
+<table>
+
+<% form_tag :action=>:update_product,:id=>@prd do  %>
+	<tr><td>Modelo:</td><td> <%=text_field :prd, :model,:disabled=>true%></td></tr>
+	<tr><td>Nombre:</td><td><%=text_field :prd, :nom%></td></tr>
+	<tr><td>Descripcion:</td><td><%=text_area :prd, :descripcio, :rows=>5%></td></tr>
+	<tr><td>Precio:</td><td><%=text_field :prd, :preu%></td></tr>
+	<tr><td>Url:</td><td><%=text_field :prd, :url%></td></tr>
+	
+	<!--<tr><td>Activo:</td><td><%=check_box :prd,:enabled%></td></tr>
+	<tr><td>Activo:</td><td><%=@prd.enabled ? "activo" : "desactivo"%></td></tr>-->
+	<tr><td></td><td><%= submit_tag "Actualizar" %></td></tr> 
+<% end %>
+
+</table>
+<br/>
+<%= link_to 'Volver', :action=>:list_products %>

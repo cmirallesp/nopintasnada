@@ -1,0 +1,12 @@
+#total de linea
+  total_id="pt_#{params[:model]}"
+  pu=params[:preu_unit]
+  value=params[:value]
+  total=pu.to_f*value.to_i
+
+  page[total_id].innerHTML="#{total}€"
+
+#suma total
+  page[:tabla_totales].replace_html :partial=>"totales"
+
+
